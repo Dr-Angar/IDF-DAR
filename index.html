@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Score IDF-DAR 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    padding: 15px;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+.logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.logo img {
+    max-width: 150px;
+}
+
+
+h1 {
+    text-align: center;
+    color: #0a355e;
+}
+
+
+.section {
+    margin-bottom: 20px;
+}
+.section h3 {
+    background: #0a355e;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+label {
+    display: block;
+    margin: 4px 0;
+}
+
+
+/* Score */
+.score-box {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+
+/* Couleurs – 3 niveaux */
+.low { background:#6aa84f; color:white; }
+.moderate { background:#e69138; color:white; }
+.high { background:#cc0000; color:white; }
+
+
+/* Légende */
+.legend-item {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* Footer */
+.contact, .counter, .footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+.contact a {
+    color: #1877f2;
+    font-weight: bold;
+    text-decoration: none;
+}
+</style>
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<!-- Logo -->
+<div class="logo">
+    <img src="logo.png" alt="Logo Dr ANGAR">
+</div>
+
+
+<h1>Score IDF-DAR 2026</h1>
+
+
+<form id="darForm">
+
+
+<!-- 1 -->
+<div class="section">
+<h3>1. Grossesse avec diabète</h3>
+<label><input type="radio" name="q1" value="6.5"> Oui</label>
+<label><input type="radio" name="q1" value="0" checked> Non</label>
+</div>
+
+
+<!-- 2 -->
+<div class="section">
+<h3>2. Type de diabète</h3>
+<label><input type="radio" name="q2" value="1"> Diabète de type 1 / LADA</label>
+<label><input type="radio" name="q2" value="0" checked> Diabète de type 2 ou autre</label>
+</div>
+
+
+<!-- 3 -->
+<div class="section">
+<h3>3. Durée du diabète</h3>
+<label><input type="radio" name="q3" value="1"> &gt; 20 ans</label>
+<label><input type="radio" name="q3" value="0.5"> 10 – 20 ans</label>
+<label><input type="radio" name="q3" value="0" checked> &lt; 10 ans</label>
+</div>
+
+
+<!-- 4 -->
+<div class="section">
+<h3>4. Traitement du diabète (cocher tout ce qui s’applique)</h3>
+<label><input type="checkbox" value="2"> Insuline en multi-injections /j </label>
+<label><input type="checkbox" value="1.5"> Insuline premix en 1 injection/jour</label>
+<label><input type="checkbox" value="1.5"> Pompe à insuline (boucle ouverte)</label>
+<label><input type="checkbox" value="1"> Système automatisé d’insulinothérapie</label>
+<label><input type="checkbox" value="1"> Insuline basale standard</label>
+<label><input type="checkbox" value="0.75"> Insuline basale ultra-longue</label>
+<label><input type="checkbox" value="0.75"> Insuline rapide</label>
+<label><input type="checkbox" value="0.75"> Glibenclamide / Glipizide</label>
+<label><input type="checkbox" value="0.5"> Sulfamides modernes / Répaglinide</label>
+<label><input type="checkbox" value="0.25"> ≥  2 traitements l'exception de l'insuline et Sulfamides / Glinides </label>
+<label><input type="checkbox" value="0"> Mesures hygiéno-diététiques seuls ou  monotherapie a l'exception de l'insuline et Sulfamides/ Glinides</label>
+</div>
+
+
+<!-- 5 -->
+<div class="section">
+<h3>5. Hypoglycémies (4 dernières semaines)</h3>
+<label><input type="radio" name="q5" value="6.5"> Hypoglycémie asymptomatique</label>
+<label><input type="radio" name="q5" value="5"> Hypoglycémie sévère dans les 4 dernières semaines</label>
+<label><input type="radio" name="q5" value="4"> > 1 hypoglycémie /jour</label>
+<label><input type="radio" name="q5" value="3"> 6 – 7 épisodes/semaine</label>
+<label><input type="radio" name="q5" value="2"> 3 – 5 épisodes/semaine</label>
+<label><input type="radio" name="q5" value="1"> 1 – 2 épisodes/semaine</label>
+<label><input type="radio" name="q5" value="0.5"> &lt; 1 épisode/semaine</label>
+<label><input type="radio" name="q5" value="0" checked> Aucune hypoglycémie dans les 4 semaines</label>
+</div>
+
+
+<!-- 6 -->
+<div class="section">
+<h3>6. Niveau d'HbA1c</h3>
+<label><input type="radio" name="q6" value="1"> &gt; 9 %</label>
+<label><input type="radio" name="q6" value="0.5"> 7,5 – 9 %</label>
+<label><input type="radio" name="q6" value="0" checked> &lt; 7,5 %</label>
+</div>
+
+
+<!-- 7 -->
+<div class="section">
+<h3>7. Autosurveillance glycémique</h3>
+<label><input type="radio" name="q7" value="2"> Non réalisée</label>
+<label><input type="radio" name="q7" value="1"> Sous-optimale</label>
+<label><input type="radio" name="q7" value="0"> Effectue comme indiqué</label>
+<label><input type="radio" name="q7" value="-0.5" checked> CGM (tout type)</label>
+</div>
+
+
+<!-- 8 -->
+<div class="section">
+<h3>8. Urgences hyperglycémiques (Acidocétose / coma hyperosmolaire</h3>
+<label><input type="radio" name="q8" value="3.5"> dans le dernier mois</label>
+<label><input type="radio" name="q8" value="2"> dans les 2 – 3 derniers mois</label>
+<label><input type="radio" name="q8" value="1"> dans les 4 – 6 derniers mois</label>
+<label><input type="radio" name="q8" value="0" checked> Aucune</label>
+</div>
+
+
+<!-- 9 -->
+<div class="section">
+<h3>9. Complications macrovasculaires</h3>
+<label><input type="radio" name="q9" value="6.5"> Instables</label>
+<label><input type="radio" name="q9" value="2"> Stables</label>
+<label><input type="radio" name="q9" value="0" checked> Aucune complication macrovasculaire</label>
+</div>
+
+
+<!-- 10a -->
+<div class="section">
+<h3>10a. Néphropathie (DFG)</h3>
+<label><input type="radio" name="q10a" value="6.5"> &lt; 30 mL/min</label>
+<label><input type="radio" name="q10a" value="4"> 30 – 45 mL/min</label>
+<label><input type="radio" name="q10a" value="2"> 45 – 60 mL/min</label>
+<label><input type="radio" name="q10a" value="0" checked> &gt; 60 mL/min</label>
+</div>
+
+
+<!-- 10b -->
+<div class="section">
+<h3>10b. Autres complications microvasculaires</h3>
+<label><input type="radio" name="q10b" value="3"> Trois complications</label>
+<label><input type="radio" name="q10b" value="2"> Deux complications</label>
+<label><input type="radio" name="q10b" value="1"> Une complication</label>
+<label><input type="radio" name="q10b" value="0" checked> Aucune</label>
+</div>
+
+
+<!-- 11 -->
+<div class="section">
+<h3>11. Fonction cognitive / fragilité</h3>
+<label><input type="radio" name="q11" value="6.5"> Trouble cognitif</label>
+<label><input type="radio" name="q11" value="6.5"> Fragilité avancée</label>
+<label><input type="radio" name="q11" value="4"> Fragilité légère à modérée</label>
+<label><input type="radio" name="q11" value="1"> &gt; 70 ans sans soutien familial</label>
+<label><input type="radio" name="q11" value="0" checked> Normale</label>
+</div>
+
+
+<!-- 12 -->
+<div class="section">
+<h3>12. Travail physique</h3>
+<label><input type="radio" name="q12" value="4"> Intensité élevée</label>
+<label><input type="radio" name="q12" value="2"> Intensité modérée</label>
+<label><input type="radio" name="q12" value="0" checked> Faible intensité</label>
+</div>
+
+
+<!-- 13 -->
+<div class="section">
+<h3>13. Éducation thérapeutique ciblée sur le jeûne</h3>
+<label><input type="radio" name="q13" value="0" checked> Oui </label>
+<label><input type="radio" name="q13" value="1"> Non </label>
+</div>
+
+
+<!-- 14 -->
+<div class="section">
+<h3>14. Durée du jeûne</h3>
+<label><input type="radio" name="q14" value="1"> ≥ 16 heures</label>
+<label><input type="radio" name="q14" value="0" checked> &lt; 16 heures</label>
+</div>
+
+
+</form>
+
+
+<!-- Résultat -->
+<div id="result" class="score-box low">Score total : 0</div>
+
+
+<!-- Légende -->
+<div class="legend">
+    <div class="legend-item low">Score 0 – 3 points : Risque faible</div>
+    <div class="legend-item moderate">Score 3,5 – 6 points : Risque modéré</div>
+    <div class="legend-item high">Score &gt; 6 points : Risque élevé</div>
+</div>
+
+
+<!-- Contact -->
+<div class="contact">
+ Contact professionnel :
+<a href="https://www.facebook.com/MonEndocrino/" target="_blank">
+Page Facebook – Dr ANGAR / MonEndocrino
+</a>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+© 2026 – Tous droits réservés – Dr ANGAR<br>
+Score IDF-DAR 2026 <br>
+Destiné aux médecins et professionnels de santé
+</footer>
+
+
+<!-- Compteur -->
+<div class="counter">
+Nombre de visites :
+<a href='http://www.freevisitorcounters.com'>more information</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=e95e748e1eb570020b493a953baa7755e59fc1eb'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1490082/t/13"></script>
+</div>
+
+
+</div>
+
+
+<script>
+function calculateScore() {
+    let total = 0;
+
+
+    document.querySelectorAll("input[type=radio]:checked").forEach(e => {
+        total += parseFloat(e.value);
+    });
+    document.querySelectorAll("input[type=checkbox]:checked").forEach(e => {
+        total += parseFloat(e.value);
+    });
+
+
+    const box = document.getElementById("result");
+    box.textContent = "Score total : " + total.toFixed(1);
+
+
+    if (total <= 3) {
+        box.className = "score-box low";
+    } else if (total <= 6) {
+        box.className = "score-box moderate";
+    } else {
+        box.className = "score-box high";
+    }
+}
+
+
+document.querySelectorAll("input").forEach(el => {
+    el.addEventListener("change", calculateScore);
+});
+</script>
+
+
+</body>
+</html>
